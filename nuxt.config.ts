@@ -2,6 +2,10 @@
 export default defineNuxtConfig({
   // ssr: false,
   runtimeConfig: {
+    server: {
+      port: 80, // Default to PORT environment variable
+      host: '0.0.0.0', // Bind to all network interfaces
+    },
     public: {
       API_BASE: process.env.API_BASE_URL || "https://v2.himasif.id/api",
     },
